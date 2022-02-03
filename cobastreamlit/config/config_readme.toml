@@ -1,0 +1,51 @@
+[app]
+app_definition = """
+Main Dashboard 4G LTE merupakan dashboard yang dirancang dengan tujuan untuk melakukan train data, cleaning data, membentuk data baru lalu kemudian dimodelkan menggunakan beberapa tipe model machine learning untuk menampilkan hasil prediksi throughput 4G LTE dalam bentuk grafik linear dan chart, serta menunjukkan evaluasi model menggunakan metrics
+
+"""
+
+app_rules = """
+Berikut adalah beberapa bagian utama dalam Main Dashboard 4G LTE :
+* __Loading Data__: Dapat menggunakan dataset existing atau upload, menentukan target dan date column.
+* __Data Preparation__: Dapat melakukan Data Preprocessing sebelum membentuk menjadi data yang siap digunakan untuk pemodelan machine learning.
+* __Modelling__: Setelah melalui Data Preprocessing, nantinya data tersebut akan digunakan untuk pemodelan machine learning menggunakan beberapa tipe model machine learning.
+* __Launch Visualization__: Menampilkan hasil prediksi throoughput untuk kondisi actual dan predicted menggunakan beberapa tipe model machine learning. \n
+
+"""
+
+
+[tooltips]
+data_upload = """
+Your CSV file should gained from the G Net Track app and have at least the following column:
+* __Timestamp__: precise time when the measurement is taken
+* __Longitude__: one of the GPS coordinates of the mobile device
+* __Lattitude__: one of the GPS coordinates of the mobile device
+* __Speed__: speed of the bus at the time of measurement in km/h, calculated from the GPS data
+* __Operator__: the mobile country code (MCC) and mobile network code (MNC), which are used together to identify a mobile network operator uniquely
+* __CellID__: cell ID of serving cell
+* __LAC__: Location Area Code sel yang melayani, pengidentifikasi unik yang digunakan
+oleh setiap public land mobile network (PLMN) untuk memperbarui lokasi pelanggan
+seluler.
+* __RSSI__: received signal strength indicator, ukuran daya yang ada dalam sinyal radio yang
+diterima.
+* __RSRP__: reference signal received power; ini adalah ukuran kekuatan sinyal referensi
+LTE yang tersebar di full bandwidth dan narrowband.
+* __RSRQ__: reference signal received quality, menunjukkan kualitas sinyal referensi yang
+diterima.
+* __SNR__: signal-to-noise ratio, yang merupakan rasio kekuatan sinyal dengan kekuatan
+noise, dinyatakan dalam desibel.
+* __DL_Bitrate__: bitrate downlink saat ini pada saat pengukuran dinyatakan
+dalam kbps. (Target Feature)
+* __UPL_Bitrate__: bitrate uplink saat ini pada saat pengukuran dinyatakan dalam kbps.
+"""
+
+error_message = """
+Your CSV file should gained from the G Net Track app and have at least the following column:
+* __Timestamp__: gagal upload timestamp
+"""
+
+train_test_split = """
+Gunakan dengan proporsi rasio sebesar 80:20
+"""
+
+
